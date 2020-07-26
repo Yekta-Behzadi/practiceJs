@@ -131,89 +131,109 @@
 // })
 // console.log(list3)
 
-let arayeh=[1,2,5,4,3,6,7,8,10,9,11,12,14,13,16,15,18,20];
-function iterate(number) {
-  let total=[];
-  for(let i=0; i<number.length; i++){
-    total.push(number[i])
-    console.log('the number :' + total )
-  }
-}
-console.log(iterate(arayeh));
+// let arayeh=[1,2,5,4,3,6,7,8,10,9,11,12,14,13,16,15,18,20];
+// function iterate(number) {
+//   let total=[];
+//   for(let i=0; i<number.length; i++){
+//     total.push(number[i])
+//     console.log('the number :' + total )
+//   }
+// }
+// console.log(iterate(arayeh));
 
 
 
-function list (item) {
-  let sum=[];
-  for(let i=0;i<item.length;i++){
+// function list (item) {
+//   let sum=[];
+//   for(let i=0;i<item.length;i++){
     
-    if( item[i] % 2 ===0 ){
-      sum.push(item[i])  
-      }
-  }
-  return 'numbers :'+' '+ sum
-}
+//     if( item[i] % 2 ===0 ){
+//       sum.push(item[i])  
+//       }
+//   }
+//   return 'numbers :'+' '+ sum
+// }
 
-console.log(list(arayeh));
+// console.log(list(arayeh));
 
-function forevenNumber(num){
-  evenNumber=[];
-num.forEach(number => {
-  if(number % 2 === 0){
-    evenNumber.push(number)
-  }
-});
-return evenNumber;
-}
-console.log(forevenNumber(arayeh));
+// function forevenNumber(num){
+//   evenNumber=[];
+// num.forEach(number => {
+//   if(number % 2 === 0){
+//     evenNumber.push(number)
+//   }
+// });
+// return evenNumber;
+// }
+// console.log(forevenNumber(arayeh));
 
-function mapEven(number) {
-  let evenNumber= number.map(num=>{ 
-     // return num % 2 === 0 ? num : null
-     if(num%2===0){
-       return num
-     }
+// function mapEven(number) {
+//   let evenNumber= number.map(num=>{ 
+//      // return num % 2 === 0 ? num : null
+//      if(num%2===0){
+//        return num
+//      }
      
-   })
-     return evenNumber;
+//    })
+//      return evenNumber;
  
- }
+//  }
  
- console.log(mapEven(arayeh));
+//  console.log(mapEven(arayeh));
 
 
-let car={
-  brand:'Ford',
-  model:2007,
-  datails:{
-    color:['red','blue','green','black'],
-    wheels:4
-  },
-  run: function(){
-    console.log('speed up to 220')
-  },
+// let car={
+//   brand:'Ford',
+//   model:2007,
+//   datails:{
+//     color:['red','blue','green','black'],
+//     wheels:4
+//   },
+//   run: function(){
+//     console.log('speed up to 220')
+//   },
 
-summary: function(){
-  console.log('car dtails : ' + this.model + ' '+this.brand) 
-}
+// summary: function(){
+//   console.log('car dtails : ' + this.model + ' '+this.brand) 
+// }
 
-}
+// }
 
- for (x in car){
-  if( typeof car[x] === 'function'){
-    car[x]();
-    continue
-  }
+//  for (x in car){
+//   if( typeof car[x] === 'function'){
+//     car[x]();
+//     continue
+//   }
 
-   console.log(x + ' ' + car[x])
+//    console.log(x + ' ' + car[x])
 
- }
+//  }
  
 // console.log(car.summary())
 
 
-
+let car2= new Object();
+car2.name = 'ford';
+console.log(car2)
 
 // arayeh.forEach(function(item,index){
 //   console.log(`${index} is for number : ${item}`)
 // } )
+function Car(model,brand){
+this.brand=brand,
+this.model=model,
+
+  
+ this.run= function(){
+   return 'speed up to 220'
+  },
+
+this.summary= function(){
+  return 'car dtails : ' + this.model + ' '+this.brand
+}
+}
+let car4=new Car('benz','1990');
+let car5=new Car('bmw','2006');
+// car4.model='Pejoute';
+console.log(car5 instanceof Object);
+;
