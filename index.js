@@ -157,23 +157,45 @@ return evenNumber;
 }
 console.log(forevenNumber(arayeh));
 
-
 function mapEven(number) {
- let evenNumber= number.map(num=>{ 
-    // return num % 2 === 0 ? num : null
-    if(num%2===0){
-      return num
-    }else{
-      return [];
-    }
-    
-  })
-  return evenNumber;
+  let evenNumber= number.map(num=>{ 
+     // return num % 2 === 0 ? num : null
+     if(num%2===0){
+       return num
+     }
+     
+   })
+     return evenNumber;
+ 
+ }
+ 
+ console.log(mapEven(arayeh));
+
+
+let car={
+  brand:'Ford',
+  model:2007,
+  datails:{
+    color:['red','blue','green','black'],
+    wheels:4
+  },
+  run: function(){
+    console.log('speed up to 220') 
+  },
+
+summary: function(){
+  console.log('car dtails : ' + this.model + ' '+this.brand) 
+}
 
 }
 
-console.log(mapEven(arayeh));
+ for (x in car){
+   if(typeof car[x] === 'function'){
+     car[x]();
+   }     continue;
 
+ }
+ console.log(car[x]);
 // console.log(car.summary())
 
 
