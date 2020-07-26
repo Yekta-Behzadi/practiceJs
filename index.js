@@ -8,23 +8,23 @@
 //   console.log(i)
 // }
 
-let i = 100;
+// let i = 100;
 // while (i>0) {
 //   console.log(i)
 //   i--
 // }
 
-while (true) {
-  if(i == 0){
-    break;
-  }
-  console.log(i);
-  i--;
-}
+// while (true) {
+//   if(i == 0){
+//     break;
+//   }
+//   console.log(i);
+//   i--;
+// }
 
-do{
-  console.log('yekta')
-}while (false) 
+// do{
+//   console.log('yekta')
+// }while (false) 
 
 
 
@@ -131,3 +131,54 @@ do{
 // })
 // console.log(list3)
 
+let arayeh=[1,2,5,4,3,6,7,8,10,9,11,12,14,13,16,15,18,20];
+
+function list (item) {
+  let sum=[];
+  for(let i=0;i<item.length;i++){
+    
+    if( item[i] % 2 ===0 ){
+      sum.push(item[i])  
+      }
+  }
+  return 'numbers :'+' '+ sum
+}
+
+console.log(list(arayeh));
+
+function forevenNumber(num){
+  evenNumber=[];
+num.forEach(number => {
+  if(number % 2 === 0){
+    evenNumber.push(number)
+  }
+});
+return evenNumber;
+}
+console.log(forevenNumber(arayeh));
+
+
+function mapEven(number) {
+ let evenNumber= number.map(num=>{ 
+    // return num % 2 === 0 ? num : null
+    if(num%2===0){
+      return num
+    }else{
+      return [];
+    }
+    
+  })
+  return evenNumber;
+
+}
+
+console.log(mapEven(arayeh));
+
+// console.log(car.summary())
+
+
+
+
+// arayeh.forEach(function(item,index){
+//   console.log(`${index} is for number : ${item}`)
+// } )
