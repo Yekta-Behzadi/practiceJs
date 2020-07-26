@@ -132,6 +132,16 @@
 // console.log(list3)
 
 let arayeh=[1,2,5,4,3,6,7,8,10,9,11,12,14,13,16,15,18,20];
+function iterate(number) {
+  let total=[];
+  for(let i=0; i<number.length; i++){
+    total.push(number[i])
+    console.log('the number :' + total )
+  }
+}
+console.log(iterate(arayeh));
+
+
 
 function list (item) {
   let sum=[];
@@ -180,7 +190,7 @@ let car={
     wheels:4
   },
   run: function(){
-    console.log('speed up to 220') 
+    console.log('speed up to 220')
   },
 
 summary: function(){
@@ -190,12 +200,15 @@ summary: function(){
 }
 
  for (x in car){
-   if(typeof car[x] === 'function'){
-     car[x]();
-   }     continue;
+  if( typeof car[x] === 'function'){
+    car[x]();
+    continue
+  }
+
+   console.log(x + ' ' + car[x])
 
  }
- console.log(car[x]);
+ 
 // console.log(car.summary())
 
 
