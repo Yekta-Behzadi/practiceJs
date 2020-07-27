@@ -265,6 +265,10 @@
 // car7.brand=1980;
 // car7.color='khaki';
 
+
+
+//APPLY
+
 let bic={
   color:'red',
   model:1980
@@ -275,5 +279,10 @@ function prop(year,name){
 
 return 'this bicycle has the color of '+this.color+' from model '+this.model
 }
-// prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
-console.log(prop.apply(bic,[1990,'ALI']))
+prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
+// console.log(prop.apply(bic,[1990,'ALI']))
+
+
+
+//CALL
+console.log(prop.call(bic,1990 ,'ali'))
