@@ -219,6 +219,10 @@ console.log(car2)
 // arayeh.forEach(function(item,index){
 //   console.log(`${index} is for number : ${item}`)
 // } )
+
+Object.prototype.sum= function(){
+  return 'sum + 1'
+}
 function Car(model,brand){
 this.brand=brand,
 this.model=model,
@@ -237,3 +241,13 @@ let car5=new Car('bmw','2006');
 // car4.model='Pejoute';
 console.log(car5 instanceof Object);
 ;
+ Car.prototype.run= function(){
+   return 'run'
+ }
+ Car.prototype.hasan= function(){
+  return 'hasan'
+}
+function person(name) {
+  this.name= name;
+}
+let firstPerson= new person('yekta');
