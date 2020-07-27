@@ -277,7 +277,7 @@ let bic={
 function prop(year,name){
   console.log(year,name)
 
-return 'this bicycle has the color of '+this.color+' from model '+this.model
+console.log('this bicycle has the color of '+this.color+' from model '+this.model) 
 }
 prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
 // console.log(prop.apply(bic,[1990,'ALI']))
@@ -286,3 +286,8 @@ prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
 
 //CALL
 console.log(prop.call(bic,1990 ,'ali'))
+
+// BIND
+prop.bind(bic,'orange',1930)()
+let val=prop.bind(bic,'orange',1930)
+val()
