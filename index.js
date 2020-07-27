@@ -212,55 +212,68 @@
 // console.log(car.summary())
 
 
-let car2= new Object();
-car2.name = 'ford';
-console.log(car2)
+// let car2= new Object();
+// car2.name = 'ford';
+// console.log(car2)
 
 // arayeh.forEach(function(item,index){
 //   console.log(`${index} is for number : ${item}`)
 // } )
 
-Object.prototype.sum= function(){
-  return 'sum + 1'
-}
-function Car(model,brand){
-this.brand=brand,
-this.model=model,
+// Object.prototype.sum= function(){
+//   return 'sum + 1'
+// }
+// function Car(model,brand){
+// this.brand=brand,
+// this.model=model,
 
   
- this.run= function(){
-   return 'speed up to 220'
-  },
+//  this.run= function(){
+//    return 'speed up to 220'
+//   },
 
-this.summary= function(){
-  return 'car dtails : ' + this.model + ' '+this.brand
-}
-}
-let car4=new Car('benz','1990');
-let car5=new Car('bmw','2006');
-// car4.model='Pejoute';
-console.log(car5 instanceof Object);
-;
- Car.prototype.run= function(){
-   return 'run'
- }
- Car.prototype.hasan= function(){
-  return 'hasan'
-}
-function person(name) {
-  this.name= name;
-}
-let firstPerson= new person('yekta');
+// this.summary= function(){
+//   return 'car dtails : ' + this.model + ' '+this.brand
+// }
+// }
+// let car4=new Car('benz','1990');
+// let car5=new Car('bmw','2006');
+// // car4.model='Pejoute';
+// console.log(car5 instanceof Object);
+// ;
+//  Car.prototype.run= function(){
+//    return 'run'
+//  }
+//  Car.prototype.hasan= function(){
+//   return 'hasan'
+// }
+// function person(name) {
+//   this.name= name;
+// }
+// let firstPerson= new person('yekta');
 
-let car6= Object.create(null);
-// sakhtan objecti az car5 yani tamame khososiat car5 ro dashte bashe + bject jadid k color hast.+ yek function jadid
+// let car6= Object.create(null);
+// // sakhtan objecti az car5 yani tamame khososiat car5 ro dashte bashe + bject jadid k color hast.+ yek function jadid
 
-let newCar=Object.create(car5);
-car5.color='red';
-newCar.makeSmile=function(){
-  console.log(':)')
+// let newCar=Object.create(car5);
+// car5.color='red';
+// newCar.makeSmile=function(){
+//   console.log(':)')
+// }
+
+// let car7=Object.create(newCar);
+// car7.brand=1980;
+// car7.color='khaki';
+
+let bic={
+  color:'red',
+  model:1980
 }
 
-let car7=Object.create(newCar);
-car7.brand=1980;
-car7.color='khaki';
+function prop(year,name){
+  console.log(year,name)
+
+return 'this bicycle has the color of '+this.color+' from model '+this.model
+}
+// prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
+console.log(prop.apply(bic,[1990,'ALI']))
