@@ -271,18 +271,23 @@
 
 let bic={
   color:'red',
-  model:1980
+  model:1980,
+ prop: function(year,name){
+    console.log(year,name)
+  
+  console.log('this bicycle has the color of '+this.color+' from model '+this.model) 
+  }
 }
-
-function prop(year,name){
-  console.log(year,name)
-
-console.log('this bicycle has the color of '+this.color+' from model '+this.model) 
+let hercar={
+  color:'blue',
+  model:2020,
 }
-prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
+bic.prop.apply(hercar,[1920,'HASAM']);
+
+// prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
 // console.log(prop.apply(bic,[1990,'ALI']))
 
-
+// APPLY 
 
 //CALL
 console.log(prop.call(bic,1990 ,'ali'))
