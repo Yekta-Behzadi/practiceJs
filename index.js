@@ -251,3 +251,16 @@ function person(name) {
   this.name= name;
 }
 let firstPerson= new person('yekta');
+
+let car6= Object.create(null);
+// sakhtan objecti az car5 yani tamame khososiat car5 ro dashte bashe + bject jadid k color hast.+ yek function jadid
+
+let newCar=Object.create(car5);
+car5.color='red';
+newCar.makeSmile=function(){
+  console.log(':)')
+}
+
+let car7=Object.create(newCar);
+car7.brand=1980;
+car7.color='khaki';
