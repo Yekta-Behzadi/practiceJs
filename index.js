@@ -312,17 +312,27 @@
 //     list.push(i)
 //   }
 // }
-'use strict'
+// 'use strict'
 
-try{
- b=3;
-}catch(err){
-console.log(err.name,err.message)
-}
+// try{
+//  b=3;
+// }catch(err){
+// console.log(err.name,err.message)
+// }
 
-try{
-  if(true){
-    throw {name:'Arrore', message:'This is an error'}
-  }
-}catch(err) {
-  console.log(err.name,err.message)}
+// try{
+//   if(true){
+//     throw {name:'Arrore', message:'This is an error'}
+//   }
+// }catch(err) {
+//   console.log(err.name,err.message)}
+
+  setTimeout(function() {
+    console.log('Hello Yekta')
+  },00)
+let i=0;
+  setInterval(() => {
+    console.log(i);
+    i++
+  }, 1000);
+  
