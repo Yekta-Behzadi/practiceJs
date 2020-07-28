@@ -269,30 +269,60 @@
 
 //APPLY
 
-let bic={
-  color:'red',
-  model:1980,
- prop: function(year,name){
-    console.log(year,name)
+// let bic={
+//   color:'red',
+//   model:1980,
+//  prop: function(year,name){
+//     console.log(year,name)
   
-  console.log('this bicycle has the color of '+this.color+' from model '+this.model) 
+//   console.log('this bicycle has the color of '+this.color+' from model '+this.model) 
+//   }
+// }
+// let hercar={
+//   color:'blue',
+//   model:2020,
+// }
+// bic.prop.apply(hercar,[1920,'HASAM']);
+
+// // prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
+// // console.log(prop.apply(bic,[1990,'ALI']))
+
+// // APPLY 
+
+// //CALL
+// console.log(prop.call(bic,1990 ,'ali'))
+
+// // BIND
+// prop.bind(bic,'orange',1930)()
+// let val=prop.bind(bic,'orange',1930)
+// val()
+// let list=[];
+
+// for(let i=0; i<10; i++){
+//   if(i % 2 ===0 ){
+//     // debugger;
+//     console.log('a')
+//   }else{
+//     console.log('b')
+
+//   }
+//   if (i%2 !== 0) {
+    
+//   } else {
+//     list.push(i)
+//   }
+// }
+'use strict'
+
+try{
+ b=3;
+}catch(err){
+console.log(err.name,err.message)
+}
+
+try{
+  if(true){
+    throw {name:'Arrore', message:'This is an error'}
   }
-}
-let hercar={
-  color:'blue',
-  model:2020,
-}
-bic.prop.apply(hercar,[1920,'HASAM']);
-
-// prop(1990); //DG AZ APPLY NMISHE ESTEFADE KARD, RAHESH:
-// console.log(prop.apply(bic,[1990,'ALI']))
-
-// APPLY 
-
-//CALL
-console.log(prop.call(bic,1990 ,'ali'))
-
-// BIND
-prop.bind(bic,'orange',1930)()
-let val=prop.bind(bic,'orange',1930)
-val()
+}catch(err) {
+  console.log(err.name,err.message)}
