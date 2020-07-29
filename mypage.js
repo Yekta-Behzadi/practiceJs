@@ -74,14 +74,23 @@ function Sum(params) {
 // console.log(new Sum)
 
 
-let obj={
-  a:10,
-  sum1:function() {
-    console.log(this.a, this)
-  },
-  sum2:()=>{
-    console.log(this.a, this)
-  }
+// let obj={
+//   a:10,
+//   sum1:function() {
+//     console.log(this.a, this)
+//   },
+//   sum2:()=>{
+//     console.log(this.a, this)
+//   }
+// }
+// obj.sum1()
+// obj.sum2();
+
+function total(a=2,b=3){
+  console.log(a,b);
+console.log(a*b);
 }
-obj.sum1()
-obj.sum2();
+total()
+total(6,5)
+total(3)
+
