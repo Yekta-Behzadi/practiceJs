@@ -45,3 +45,22 @@ console.log (array.map(function(item) {
 }));
 
 console.log(array.map( item=> item*2 ))
+
+function Person() {
+  this.age=0;
+  setInterval(()=>{
+  
+    // console.log(this.age++)
+  }, 1000);
+  
+}
+let person= new Person(); 
+
+let arguments=[1,2,3,4]
+// function sum(a,b) {
+//   console.log(arguments[1])
+// }
+// console.log(sum(1,2))
+let sum=(a,b)=> console.log(arguments);
+
+console.log(sum(1,2))
