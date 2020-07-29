@@ -101,4 +101,17 @@ return args.reduce((pre,current)=>{
 })
 }
 console.log(args(1,2,3,4,56))
+let list=[1,2,3,4,5,6]
+let list2=[5,6,7,8] 
+function sum(a,b,c){
+  console.log(a+b+c)
+}
+// sum(list[0],list[1],list[2],list[3])
+console.log(...list)
+console.log([...list,22,...list2])
 
+function sum1(a,b,c,...x){
+  console.log(x)
+  console.log(a+b+c)
+}
+sum1(...list)
