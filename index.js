@@ -336,3 +336,8 @@ let i=0;
     i++
   }, 1000);
   
+function getRandomInt(max) {
+  return   Math.floor(Math.random () * Math.floor(max))
+}
+
+console.log(getRandomInt(6000))
