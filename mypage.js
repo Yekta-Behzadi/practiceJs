@@ -94,3 +94,11 @@ total()
 total(6,5)
 total(3)
 
+function args(a,b,...args){
+console.log(a,b,args);
+return args.reduce((pre,current)=>{
+  return pre+current
+})
+}
+console.log(args(1,2,3,4,56))
+
