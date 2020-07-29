@@ -54,13 +54,34 @@ function Person() {
   }, 1000);
   
 }
-let person= new Person(); 
+// let person= new Person(); 
 
-let arguments=[1,2,3,4]
-// function sum(a,b) {
-//   console.log(arguments[1])
-// }
+// let arguments=[1,2,3,4]
+// // function sum(a,b) {
+// //   console.log(arguments[1])
+// // }
+// // console.log(sum(1,2))
+// let sum=(a,b)=> console.log(arguments);
+
 // console.log(sum(1,2))
-let sum=(a,b)=> console.log(arguments);
+function Sum(params) {
+  
+}
 
-console.log(sum(1,2))
+// let Sum=()=>{
+
+// }
+// console.log(new Sum)
+
+
+let obj={
+  a:10,
+  sum1:function() {
+    console.log(this.a, this)
+  },
+  sum2:()=>{
+    console.log(this.a, this)
+  }
+}
+obj.sum1()
+obj.sum2();
