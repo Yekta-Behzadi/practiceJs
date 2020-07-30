@@ -115,3 +115,97 @@ function sum1(a,b,c,...x){
   console.log(a+b+c)
 }
 sum1(...list)
+
+let name= 'yekta';
+let numbers=[1,2,3,4,56,]
+
+for(let item of name){
+  console.log(item)
+}
+for(let item of numbers){
+  console.log(item)
+}
+let list3=[1,2,3,4,5,6]
+let [,firstitem,,seconditem]= list3;
+
+console.log(firstitem,seconditem)
+
+// let[a,b]=[4,8];
+// console.log(a,b)
+let [c=1,d=1]=[4]
+console.log(c,d)
+
+function foo() {
+  return [11,22,33,'false',44,'ali']
+}
+let [e=1,,f=1,...g]=foo()
+console.log(e,f,g)
+
+let object={
+  name:'yekta',
+  fun:()=>{
+    return 'hello yekta'
+  }
+}
+let{name:esm,age=18,fun}=object
+console.log(esm,age,fun())
+
+
+
+let obj = {
+  name : "Eliyas Nazemi",
+  work : "Web Developer",
+  age : () => "21"
+}
+// let {name , work , age} = obj;
+// console.log(`hello ${name} your work is ${name} and your age ${age()}`);
+
+// function Car(brand,model,year) {
+//   this.brand=brand;
+//   this.model=model;
+//   this.year=year;
+//   this.run=()=>{
+//     return 'speed up to 200'
+//   }
+// }
+// console.log(Car.prototype)
+// let firstcar= new Car('volvo','x3',2002)
+// console.log(firstcar)
+
+class Car{
+  constructor(brand,model,year){
+    this.brand=brand;
+    this.model=model;
+    this.year=year;
+   
+  }
+  run(){
+    return 'speed up to 200'
+  }
+}
+let firstcar= new Car('volvo','x3',2002)
+console.log(firstcar)
+console.log(firstcar.__proto__===Car.prototype);
+
+class Irankhodro extends Car{
+  constructor(brand,model,year,color){
+    super(brand,model,year);
+    this.color=color
+  }
+  por(){
+return this.run();
+  }
+  run(){
+  //  console.log(super.run())
+   console.log(super.run());
+ return 'speed up to 40';
+  }
+  fly(){
+    return 'this car can make you fly'
+  }
+  go(){
+  return 'have a go at driving this car'
+  }
+}
+let mycar= new Irankhodro('Irankhodro','pride',2018,'black')
+console.log(mycar.por())
