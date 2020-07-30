@@ -236,7 +236,7 @@ console.log(Irankhodro.run())
 
 // toseeye object Array
 
-class advanceArray{
+class advanceArray extends Array{
 
 }
 
