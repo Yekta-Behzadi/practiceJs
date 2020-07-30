@@ -257,8 +257,19 @@ class Foo{
 set current(value){
 this.log.push(value)
 }
+get latest(){
+ if (this.log.lenght === 0)  {
+   return undefined
+  } 
+  return this.log[this.log.length-1]
+
+}
 
 }
 let bar=new Foo();
 bar.current='a';
+bar.current='b';
+bar.current='c';
+
 console.log(bar.log)
+
