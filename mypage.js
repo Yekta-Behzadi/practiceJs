@@ -237,8 +237,28 @@ console.log(Irankhodro.run())
 // toseeye object Array
 
 class advanceArray extends Array{
-
+ find(value){
+let final= this.filter(item=> item===value);
+return final.length === 0 ? 'error' : final[0]
+ }
 }
 
 let list4=new advanceArray('yekta','mehrnaz','hasan');
 console.log(list4);  //objecte khali neshon mide
+console.log(list4.find('mehrnaz'));
+
+
+// SETTER GETTER
+
+class Foo{
+  constructor(){
+    this.log=[]
+  }
+set current(value){
+this.log.push(value)
+}
+
+}
+let bar=new Foo();
+bar.current='a';
+console.log(bar.log)
