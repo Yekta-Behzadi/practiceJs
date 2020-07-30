@@ -233,3 +233,12 @@ let mycar= new Irankhodro('Irankhodro','pride',2018,'black')
 console.log(Irankhodro.run())
 // console.log(mycar.por())
 // console.log(Irankhodro.por())
+
+// toseeye object Array
+
+class advanceArray{
+
+}
+
+let list4=new advanceArray('yekta','mehrnaz','hasan');
+console.log(list4);  //objecte khali neshon mide
