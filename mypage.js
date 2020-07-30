@@ -273,3 +273,18 @@ bar.current='c';
 
 console.log(bar.log)
 
+let myname='hesam';
+let keyage= 'age';
+
+let theobject={
+  // mayname:myname,
+  myname,
+  [keyage]:18,
+  'yekta':()=>{
+    return 'hello yekta'
+  }
+
+}
+console.log(theobject[keyage]);
+console.log(theobject['yekta']());
+console.log(theobject)
