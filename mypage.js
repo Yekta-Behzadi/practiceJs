@@ -214,7 +214,7 @@ class Irankhodro extends Car{
     super(brand,model,year);
     this.color=color
   }
- por(){
+ static por(){
 return this.run();
   }
    static run(){
@@ -230,6 +230,6 @@ return this.run();
 }
 let mycar= new Irankhodro('Irankhodro','pride',2018,'black')
 // console.log(mycar.run())
-// console.log(Irankhodro.run())
-console.log(mycar.por())
+console.log(Irankhodro.run())
+// console.log(mycar.por())
 // console.log(Irankhodro.por())
