@@ -187,17 +187,38 @@ let firstcar= new Car('volvo','x3',2002)
 console.log(firstcar)
 console.log(firstcar.__proto__===Car.prototype);
 
+// class Irankhodro extends Car{
+//   constructor(brand,model,year,color){
+//     super(brand,model,year);
+//     this.color=color
+//   }
+//   por(){
+// return this.run();
+//   }
+//   run(){
+//   //  console.log(super.run())
+//    console.log(super.run());
+//  return 'speed up to 40';
+//   }
+//   fly(){
+//     return 'this car can make you fly'
+//   }
+//   go(){
+//   return 'have a go at driving this car'
+//   }
+// }
+// let mycar= new Irankhodro('Irankhodro','pride',2018,'black')
+// console.log(mycar.por())
 class Irankhodro extends Car{
   constructor(brand,model,year,color){
     super(brand,model,year);
     this.color=color
   }
-  por(){
+ por(){
 return this.run();
   }
-  run(){
-  //  console.log(super.run())
-   console.log(super.run());
+   static run(){
+  //  console.log(super.run());
  return 'speed up to 40';
   }
   fly(){
@@ -208,4 +229,7 @@ return this.run();
   }
 }
 let mycar= new Irankhodro('Irankhodro','pride',2018,'black')
+// console.log(mycar.run())
+// console.log(Irankhodro.run())
 console.log(mycar.por())
+// console.log(Irankhodro.por())
