@@ -288,3 +288,15 @@ let theobject={
 console.log(theobject[keyage]);
 console.log(theobject['yekta']());
 console.log(theobject)
+
+
+let firstSymbol = Symbol()
+let secondSymbol = Symbol();
+
+let firstObj={
+  [firstSymbol]:22,
+  name:'yekta'
+}
+for(let i in firstObj){
+  console.log(i)
+}
